@@ -1,0 +1,21 @@
+# ──────────────────────────────────────────────────
+# Link        https://www.hackerrank.com/challenges/py-introduction-to-sets/problem?isFullScreen=true
+# Problem     Introduction to Sets
+# Difficulty  Easy
+# Subdomain   Sets
+# Platform    HackerRank
+# Language    pypy3
+# Status      Accepted
+# Submitted   2026-08-12, 08:16 p.m.
+# ──────────────────────────────────────────────────
+
+def average(array):
+    s=set()
+    l=0
+    for x in array:
+        if x not in s:
+            s.add(x)
+            l+=1
+    a=sum(s)
+    return a/l
+    
