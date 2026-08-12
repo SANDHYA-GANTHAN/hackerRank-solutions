@@ -7,6 +7,12 @@
 # Language    pypy3
 # Status      Accepted
 # Submitted   2026-08-12, 08:12 p.m.
+# Technique   linear-scan-boolean-flags
+# Time        O(n)
+# Space       O(1)
+# Insight     The algorithm iterates through the string once, updating five boolean flags whenever a character satisfies the corresponding validation method.
+# Interview   Before: "I would use five separate list comprehensions to check each condition." After: "Using a single linear scan with O(n) time and O(1) space is more efficient, as it avoids multiple passes over the string while correctly identifying if any character meets the criteria."
+# Pitfalls    (1) Confusing the requirement to check if any character exists with the built-in methods that check if all characters satisfy a condition.  (2) Failing to initialize boolean flags to False before starting the iteration.
 # ──────────────────────────────────────────────────
 
 if __name__ == '__main__':
