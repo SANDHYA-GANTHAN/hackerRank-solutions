@@ -7,6 +7,12 @@
 # Language    pypy3
 # Status      Accepted
 # Submitted   2026-08-12, 08:16 p.m.
+# Technique   set-deduplication-manual-counter
+# Time        O(N)
+# Space       O(N)
+# Insight     The implementation calculates the average of distinct elements by manually tracking unique entries in a set and maintaining a counter to avoid redundant set length operations.
+# Interview   Before: "I would use a frequency map to count occurrences." After: "By using a set to filter duplicates, I achieve O(N) time and space complexity, which is optimal for identifying distinct heights in the greenhouse array."
+# Pitfalls    (1) The code assumes the input array is non-empty, as division by zero occurs if the set remains empty.  (2) The implementation does not explicitly round the result to three decimal places as requested by the problem description.
 # ──────────────────────────────────────────────────
 
 def average(array):
