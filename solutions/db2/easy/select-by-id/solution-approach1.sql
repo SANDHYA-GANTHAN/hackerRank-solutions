@@ -7,6 +7,12 @@
 -- Language    db2
 -- Status      Accepted
 -- Submitted   2026-08-26, 08:49 p.m.
+-- Technique   simple-where-clause-filter
+-- Time        O(N)
+-- Space       O(1)
+-- Insight     The query retrieves all columns for a specific record by applying an equality filter on the primary key column.
+-- Interview   Before: "How do I fetch a specific row by its unique identifier?" After: "Use a SELECT statement with a WHERE clause filtering on the ID column, which executes in O(N) time to scan the table for the matching record."
+-- Pitfalls    (1) Failing to use the exact column name ID as specified in the schema.  (2) Incorrectly assuming the ID column is indexed, though the query remains functionally correct regardless of indexing.
 -- ──────────────────────────────────────────────────
 
 
