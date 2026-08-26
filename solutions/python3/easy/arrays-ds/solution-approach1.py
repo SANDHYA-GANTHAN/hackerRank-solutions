@@ -7,6 +7,12 @@
 # Language    python3
 # Status      Accepted
 # Submitted   2026-08-26, 08:42 p.m.
+# Technique   python-slicing-reverse
+# Time        O(n)
+# Space       O(n)
+# Insight     The implementation utilizes Python's built-in slicing syntax to create a new list containing all elements of the input array in reverse order.
+# Interview   Before: "I would iterate through the array with two pointers to swap elements in place." After: "Using Python's slicing syntax is more idiomatic and concise, achieving the reversal in O(n) time and O(n) space, which is optimal for returning a new array as required by the problem statement."
+# Pitfalls    (1) Assuming the function modifies the input array in-place when it actually returns a new list.  (2) Overlooking that the slicing syntax creates a shallow copy, which consumes O(n) additional memory.
 # ──────────────────────────────────────────────────
 
 #!/bin/python3
