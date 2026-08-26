@@ -7,6 +7,12 @@
 -- Language    db2
 -- Status      Accepted
 -- Submitted   2026-08-26, 08:48 p.m.
+-- Technique   select-all-wildcard
+-- Time        O(N)
+-- Space       O(N)
+-- Insight     The query retrieves every column and row from the specified table by utilizing the wildcard operator.
+-- Interview   Before: "How do I fetch all data from the CITY table?" After: "Use the SELECT * FROM CITY statement, which performs an O(N) scan of the table to return all columns for every row."
+-- Pitfalls    (1) Using SELECT * in production environments can lead to unnecessary data transfer and performance degradation when tables contain many columns.  (2) The wildcard operator does not allow for explicit column ordering or filtering, which may cause issues if the schema changes unexpectedly.
 -- ──────────────────────────────────────────────────
 
 
