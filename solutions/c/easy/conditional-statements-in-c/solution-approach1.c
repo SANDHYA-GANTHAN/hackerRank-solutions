@@ -7,6 +7,12 @@
 // Language    c
 // Status      Accepted
 // Submitted   2026-08-27, 08:47 p.m.
+// Technique   if-else-if-ladder
+// Time        O(1)
+// Space       O(1)
+// Insight     The program maps a single integer input to a specific string output using a chain of conditional statements that terminates with a default case for values exceeding nine.
+// Interview   Before: "I would use a switch statement or an array of strings to map the numbers." After: "Using an if-else ladder provides O(1) time complexity and handles the boundary condition n > 9 as specified in the problem requirements."
+// Pitfalls    (1) Failing to handle the case where n > 9 by incorrectly assuming the input range is limited to 1-9.  (2) Misinterpreting the requirement to print 'Greater than 9' for any integer input that is not in the range [1, 9].
 // ──────────────────────────────────────────────────
 
 #include <assert.h>
